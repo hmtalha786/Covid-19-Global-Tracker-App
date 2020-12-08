@@ -7,7 +7,7 @@
 }
 
 .infoBox--selected {
-  border-top: 10px solid greenyellow;
+  border: 2px solid greenyellow;
 }
 
 .infoBox--red {

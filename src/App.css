@@ -6,6 +6,10 @@ body {
   background-color: #f5f6fa;
 }
 
+h3 {
+  text-align: center;
+}
+
 .app {
   display: flex;
   justify-content: space-evenly;
@@ -36,6 +40,11 @@ body {
 
 .app__left {
   flex: 0.9;
+  margin-top: 10px;
+}
+
+.app__right {
+  margin-top: 10px;
 }
 
 .app__information > h3 {
