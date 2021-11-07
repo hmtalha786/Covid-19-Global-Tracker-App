@@ -1,13 +1,9 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
+import { AppBar, Toolbar, Typography, InputBase } from "@material-ui/core";
 import { alpha, makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import Covid from "../Images/Covid_logo.jpg";
+import { FiMessageSquare, FiShare2, FiInfo } from "react-icons/fi";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
+    marginRight: theme.spacing(2),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(1),
@@ -69,6 +66,11 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  icon: {
+    color: "#fff",
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+  },
 }));
 
 export default function SearchAppBar() {
@@ -78,15 +80,7 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
-            <img src={Covid} alt="logo" className={classes.logo} />
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
+          <img src={Covid} alt="logo" className={classes.logo} />
           <Typography className={classes.title} noWrap>
             Covid-19 Global Tracker App
           </Typography>
@@ -103,6 +97,9 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
+          <FiShare2 size="1.3rem" className={classes.icon} />
+          <FiMessageSquare size="1.3rem" className={classes.icon} />
+          <FiInfo size="1.3rem" className={classes.icon} />
         </Toolbar>
       </AppBar>
     </div>
